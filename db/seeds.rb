@@ -5,3 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+CoffeeBean.destroy_all
+User.destroy_all
+Brew.destroy_all
+
+user_list = FactoryBot.create_list(:user, 3)
+
+user_list.each do |user|
+  FactoryBot.create_list(:brew, 5, user: user)
+end
+
+FactoryBot.create_list(:coffee_bean, 10)
