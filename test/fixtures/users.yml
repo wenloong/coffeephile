@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  f_name: MyString
+  l_name: MyString
+  username: MyString
+  password: MyString
+  recent_login_date: 2021-01-16 14:48:52
+  streak: 
+
+two:
+  f_name: MyString
+  l_name: MyString
+  username: MyString
+  password: MyString
+  recent_login_date: 2021-01-16 14:48:52
+  streak: 

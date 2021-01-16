@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  brew_method: MyString
+  c_weight: 
+  w_weight: 
+  extra_details: MyString
+  user: one
+
+two:
+  brew_method: MyString
+  c_weight: 
+  w_weight: 
+  extra_details: MyString
+  user: two
