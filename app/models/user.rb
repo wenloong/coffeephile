@@ -1,4 +1,4 @@
 class User < ApplicationRecord
-  has_one :point
-  has_many :brews
+  has_one :point, dependent: :destroy
+  has_many :brews, dependent: :destroy
 end
