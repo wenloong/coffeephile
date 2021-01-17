@@ -7,6 +7,7 @@
       <h3>Your Brew</h3>
     </div>
     <div class="Section__welcome">
+      <%= link_to "+", new_user_brew_path(@user) %>
       <p>Coffee, Tea, or Me <span id="text-highlight"><%= @user.f_name %></span>?</p>
     </div>
   </div>
@@ -19,8 +20,6 @@
       <th>CREAMER (g)</th>
       <th>MILK (g)</th>
       <th>DESCRIPTION</th>
-      <th></th>
-      <th></th>
     </tr>
     <% @user.brews.most_recent_brews.each do |brew| %>
       <tr class="Table__data">
@@ -30,10 +29,7 @@
         <td> <%= brew.cream_weight%> </td>
         <td> <%= brew.s_weight%> </td>
         <td class="Table__description"> <%= brew.extra_details%></td> 
-        <td> <%= link_to "Details", user_brew_path(@user, brew) %></td>
-        <td> <%= button_tag "Share" %> </td>
       </tr>
     <% end %>
   </table>
-  <%= link_to "Create New Entry", new_user_brew_path(@user) %>
 </div>
