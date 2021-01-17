@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   # get '/logout' => 'sessions#destroy'
 
   get '/coffee_beans', to: 'coffee_beans#index'
+  get '/shop', to: 'shop#index'
   get '/specific_bean/:id', to: 'specific_bean#index'
   
    resources :users, except: [:index] do # view, create, delete, update

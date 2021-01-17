@@ -23,6 +23,13 @@ p {
     color: $primary-color;
 }
 
+.Banner {
+    font-size: 40px;
+    color: $secondary-font-color;
+    align-content: center;
+    text-align: center;
+}
+
 .Navigation {
     display: flex;
     justify-content: space-between;

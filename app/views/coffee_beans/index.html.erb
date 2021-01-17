@@ -8,17 +8,19 @@
     <div class="Coffee__list">
         <% @coffee_beans.each do |bean| %>
             <div class="Coffee__item">
-                <div class="Coffee__item--image">
-                    <%=image_tag("bluebottle.jpg", alt: "Featured Image")%>
-                </div>
-                <div>
-                    <div class="Coffee__item--title">
-                        <p><%= bean.name %></p>
+                <a href="/specific_bean/<%= bean.id %>" class="Coffee__item">
+                    <div class="Coffee__item--image">
+                        <%=image_tag("bluebottle.jpg", alt: "Featured Image")%>
                     </div>
-                    <div class="Coffee__item--brand">
-                        <p><%= bean.brand.upcase %></p>
+                    <div>
+                        <div class="Coffee__item--title">
+                            <p><%= bean.name %></p>
+                        </div>
+                        <div class="Coffee__item--brand">
+                            <p><%= bean.brand.upcase %></p>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
         <% end %>
     </div>
