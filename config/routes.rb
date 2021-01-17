@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   get '/specific_bean/:id', to: 'specific_bean#index'
   
    resources :users, except: [:index] do # view, create, delete, update
-     resources :brews, only: :show
+     resources :brews, only: [:show, :new, :create]
    end
 
   # get '/signup' => 'users#new'

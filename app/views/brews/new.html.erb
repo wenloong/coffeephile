@@ -1,0 +1,18 @@
+<section class="">
+<h2>New Brew Entry</h2>
+<%= form_with(method: :post, url: user_brews_path, local: true) do |f| %>
+  <p><%= f.label :brew_method %><br />
+    <%= f.text_field :brew_method %></p>
+    <p><%= f.label "Coffee Weight(g)" %><br />
+    <%= f.text_field :c_weight %></p>
+    <p><%= f.label "Water Weight(g)" %><br />
+    <%= f.text_field :w_weight %></p>
+    <p><%= f.label "Creamer(g)" %><br />
+    <%= f.text_field :cream_weight %></p>
+    <p><%= f.label "Sugar(g)" %><br />
+    <%= f.text_field :s_weight %></p>
+    <p><%= f.label "Extra Details" %><br />
+    <%= f.text_field :extra_details %></p>
+  <p><%= f.submit 'Create New Entry' %></p>
+<% end %>
+</section>
