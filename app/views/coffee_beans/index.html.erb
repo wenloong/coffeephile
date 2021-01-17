@@ -1,0 +1,12 @@
+<div>
+<h3> Explore </h3>
+<h2> Different Coffee </h2>
+</div>
+<div class="table">
+
+    <% @coffee_beans.each do |bean| %>
+        <div>
+            <p> <%= bean.name %> <%= bean.bean_type %> </p>
+        </div>
+    <% end %>
+</div>
