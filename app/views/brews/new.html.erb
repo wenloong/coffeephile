@@ -1,18 +1,40 @@
-<section class="">
-<h2>New Brew Entry</h2>
-<%= form_with(method: :post, url: user_brews_path, local: true) do |f| %>
-  <p><%= f.label :brew_method %><br />
-    <%= f.text_field :brew_method %></p>
-    <p><%= f.label "Coffee Weight(g)" %><br />
-    <%= f.text_field :c_weight %></p>
-    <p><%= f.label "Water Weight(g)" %><br />
-    <%= f.text_field :w_weight %></p>
-    <p><%= f.label "Creamer(g)" %><br />
-    <%= f.text_field :cream_weight %></p>
-    <p><%= f.label "Sugar(g)" %><br />
-    <%= f.text_field :s_weight %></p>
-    <p><%= f.label "Extra Details" %><br />
-    <%= f.text_field :extra_details %></p>
-  <p><%= f.submit 'Create New Entry' %></p>
-<% end %>
-</section>
+<%= stylesheet_link_tag "application.css" %>
+
+<div class="Brewentry">
+  <div class="Brewentry__wrapper">
+    <div class="Brewentry__header">
+      <h3>NEW BREW ENTRY</h3>
+    </div>
+    <%= form_with(method: :post, url: user_brews_path, local: true) do |f| %>
+      <div class="Form__field">
+        <p><%= f.label :brew_method %></p>
+        <%= select_tag(:brew_method, options_for_select([["Cold Brew", "Cold Brew"],["French Press", "French Press"],["Aeropress","Aeropress"]], params[:option] ), class:"select") %>
+      </div>
+      <div class="Form__field--wrapper">
+        <div class="Form__field">
+          <p><%= f.label "Coffee Weight (g)" %></p>
+          <%= f.text_field :c_weight %></p>
+        </div>
+        <div class="Form__field">
+          <p><%= f.label "Water Weight(g)" %></p>
+          <%= f.text_field :w_weight %></p>
+        </div>
+      </div>
+      <div class="Form__field--wrapper">
+        <div class="Form__field">
+          <p><%= f.label "Creamer(g)" %></p>
+          <%= f.text_field :cream_weight %></p>
+        </div>
+        <div class="Form__field">
+          <p><%= f.label "Sugar(g)" %></p>
+          <%= f.text_field :s_weight %></p>
+        </div>
+      </div>
+      <div class="Form__field">
+        <p><%= f.label "Extra Details" %><br />
+        <%= f.text_field :extra_details %></p>
+      </div>
+      <div class="actions"><%= f.submit 'Create New Entry' %></div>
+    <% end %>
+  </div>
+</div>

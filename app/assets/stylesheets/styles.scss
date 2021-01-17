@@ -157,7 +157,81 @@ p {
     &__welcome {
         color: $primary-font-color;
         font-size: 18px;
+        display: flex;
+        align-items: center;
+
+        > a {
+            margin-right: 10px;
+            padding: 4px 9px;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+            color: #FFFFFF;
+            background-color: rgb(70, 189, 66);
+            border-radius: 100%;
+            
+        }
     }
+}
+
+.Brewentry {
+    display: block;
+    padding: 0 7vw;
+    height: 100vh;
+    color: $primary-font-color;
+
+    &__header {
+        font-size: 1.2em;
+    }
+
+    &__wrapper {
+        background-color: #FFFFFF;
+        border-radius: 10px;
+        padding: 25px 40px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    }
+
+    textarea {
+    }
+
+    .actions {
+        margin-top: 20px;
+        input {
+            background-color: $primary-color;
+            color: $tertiary-font-color;
+            border: none;
+            padding: 10px 0;
+            border-radius: 5px;
+            font-size: 15px;
+            width: 100%;
+        }
+    }
+}
+
+.Form {
+    &__field {
+        margin-top: 15px;
+
+        &--wrapper {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        input {
+            margin-top: 5px;
+            padding: 5px;
+            width: 40%;
+        }
+    }
+}
+
+form {
+
 }
 
 .SectionTable {
@@ -224,10 +298,11 @@ p {
     }
 
     &__item {
-        margin-top: 20px;
+        margin-top: 30px;
         background-color: #FFFFFF;
         width: 30%;
         border-radius: 10px;
+        text-decoration: none;
         box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 
         &--image {
@@ -270,19 +345,18 @@ p {
 
     &__image {
         display: inline-block;
-        border-radius: 10px 0px 10px 0px;
+        border-radius: 20px 0px 20px 0px;
         box-shadow: rgba(0, 0, 0, 0.1) 7px 7px 15px;
-        width: 40%;
-        height: 450px;
-        max-height: 450px;
+        width: 50%;
+        min-height: 100%;
         position: relative;
         overflow: visible;
 
         img {
-            border-radius: 10px 0px 10px 0px;
+            border-radius: 20px 0px 20px 0px;
             width: 100%;
+            min-height: 100%;
             height: auto;
-            max-height: 450px;
             object-fit: cover;
         }
     }
