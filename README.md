@@ -36,7 +36,7 @@
     <img src="/app/assets/images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Cofeephile</h3>
+  <h3 align="center">Coffeephile.</h3>
 
   <p align="center">
     A site for Coffeephiles.
@@ -176,15 +176,15 @@ Project Link: [https://github.com/wenloong/coffeephile](https://github.com/wenlo
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/wenloong/repo.svg?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/wenloong/coffeephile.svg?style=for-the-badge
 [contributors-url]: https://github.com/wenloong/coffeephile/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/wenloong/repo.svg?style=for-the-badge
+[forks-shield]: https://img.shields.io/github/forks/wenloong/coffeephile.svg?style=for-the-badge
 [forks-url]: https://github.com/wenloong/coffeephile/network/members
-[stars-shield]: https://img.shields.io/github/stars/wenloong/repo.svg?style=for-the-badge
+[stars-shield]: https://img.shields.io/github/stars/wenloong/coffeephile.svg?style=for-the-badge
 [stars-url]: https://github.com/wenloong/coffeephile/stargazers
-[issues-shield]: https://img.shields.io/github/issues/wenloong/repo.svg?style=for-the-badge
+[issues-shield]: https://img.shields.io/github/issues/wenloong/coffeephile.svg?style=for-the-badge
 [issues-url]: https://github.com/wenloong/coffeephile/issues
-[license-shield]: https://img.shields.io/github/license/wenloong/repo.svg?style=for-the-badge
+[license-shield]: https://img.shields.io/github/license/wenloong/coffeephile.svg?style=for-the-badge
 [license-url]: https://github.com/wenloong/coffeephile/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/cliffordng/
