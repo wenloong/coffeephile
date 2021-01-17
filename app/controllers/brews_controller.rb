@@ -1,0 +1,2 @@
+class BrewsController < ApplicationController
+end
