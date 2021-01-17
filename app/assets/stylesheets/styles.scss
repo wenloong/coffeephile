@@ -19,6 +19,10 @@ p {
     margin: 0;
 }
 
+#text-highlight {
+    color: $primary-color;
+}
+
 .Navigation {
     display: flex;
     justify-content: space-between;
@@ -73,7 +77,7 @@ p {
 
     &__information {
         position: absolute;
-        top: 80px;
+        top: 0px;
         margin-top: 50px;
         margin-left: 60px;
         color: $primary-font-color;
@@ -107,6 +111,11 @@ p {
     }   
 }
 
+.Homepage {
+    position: relative;
+    min-height: 100%;
+}
+
 .Section {
     margin-top: 70px;
     margin-bottom: 50px;
@@ -126,6 +135,69 @@ p {
             color: $primary-font-color;
             font-size: 25px;
         }
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    &__right {
+        text-align: right;
+    }
+
+    &__welcome {
+        color: $primary-font-color;
+        font-size: 18px;
+    }
+}
+
+.SectionTable {
+    min-height: 100vh;
+}
+
+
+.Table {
+    margin-top: 20px;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    width: 100%;
+    max-height: 600px;
+    overflow-y: scroll;
+    text-align: left;
+    border-collapse: collapse;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+    th, td {
+        padding: 20px 25px;
+    }
+
+    th {
+        border-bottom: 1px solid #DDD;
+    }
+
+
+    &__header {
+        color: $secondary-font-color;
+        text-align: left;
+        font-size: 0.8em;
+    }
+
+    &__data {
+        color: $primary-font-color;
+    }
+
+    &__border {
+        border-bottom: 1px solid $secondary-font-color;
+    }
+
+    &__description {
+        min-width: 250px;
+        max-width: 250px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 }
 
@@ -179,6 +251,7 @@ p {
     }
 }
 
+
 .Specific {
     position: relative;
     display: flex;
@@ -186,6 +259,7 @@ p {
     min-height: 90vh;
     margin: auto 0;
     padding: 0px 7vw;
+
 
     &__image {
         display: inline-block;
@@ -343,14 +417,17 @@ p {
 
 footer {
     position: relative;
+    width: 100%;
+    bottom: 0;
+    left: 0;
     height: 50px;
     background-color: $navigation-color;
     color: $tertiary-font-color;
-    padding: 0px 7vw;
     border-radius: 20px 20px 0 0;
 
     div {
         position: absolute;
         bottom: 10px;
+        padding: 0px 7vw;
     }
 }

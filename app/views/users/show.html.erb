@@ -1,35 +1,38 @@
 <%= stylesheet_link_tag "application.css" %>
 
-<h1>Welcome, <%= @user.f_name %>!</h1>
+<div class="Section SectionTable">
+  <div class="Section__wrapper">  
+    <div class="Section__header">
+      <p>Relive</p>
+      <h3>Your Brew</h3>
+    </div>
+    <div class="Section__welcome">
+      <p>Coffee, Tea, or Me <span id="text-highlight"><%= @user.f_name %></span>?</p>
+    </div>
+  </div>
 
-<div class="title-brew-page">
-  <h3>Relive</h3>
-  <h2>Your Brew</h2>
-</div>
-
-<div class="blue-box">
-  <table>
-  <tr>
-    <th>Brew method</th>
-    <th>Coffee(g)</th>
-    <th>Water(g)</th>
-    <th>Creamer(g)</th>
-    <th>Milk</th>
-    <th>Description</th>
-    <th></th>
-  </tr>
-  <% @user.brews.each do |brew| %>
-    <tr>
-      <td> <%= brew.brew_method%> </td>
-      <td> <%= brew.c_weight%> </td>
-      <td> <%= brew.w_weight%> </td>
-      <td> data </td>
-      <td> data </td>
-      <td> <%= brew.extra_details%></td> 
-      <td><%= link_to "More Details", user_brew_path(@user, brew) %></td>
-      <td> <%= button_tag "Share" %> </td>
+  <table class="Table">
+    <tr class="Table__header">
+      <th>BREW METHOD</th>
+      <th>COFFEE (g)</h3>
+      <th>WATER (g)</th>
+      <th>CREAMER (g)</th>
+      <th>MILK (g)</th>
+      <th>DESCRIPTION</th>
+      <th></th>
+      <th></th>
     </tr>
-  <% end %>
-</table>
-
+    <% @user.brews.each do |brew| %>
+      <tr class="Table__data">
+        <td> <%= brew.brew_method.capitalize %> </td>
+        <td> <%= brew.c_weight%> </td>
+        <td> <%= brew.w_weight%> </td>
+        <td> N/A </td>
+        <td> N/A </td>
+        <td class="Table__description"> <%= brew.extra_details%></td> 
+        <td> <%= link_to "Details", user_brew_path(@user, brew) %></td>
+        <td> <%= button_tag "Share" %> </td>
+      </tr>
+    <% end %>
+  </table>
 </div>
