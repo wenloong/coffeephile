@@ -1,0 +1,74 @@
+<%= stylesheet_link_tag "application.css" %>
+<div>
+    <div class="Banner">
+        <h1>Coffeephile Store</h1>
+    </div>
+
+    <div class="Section">
+        <div class="Section__header">
+            <h3>Browse</h3>
+        </div>
+        <div class="Coffee__list">
+            <div class="Coffee__item">
+                <div class="Coffee__item--image">
+                    <%=image_tag("tshirt.jpg", alt: "Featured Image")%>
+                </div>
+                <div>
+                    <div class="Coffee__item--title">
+                        <p>Coffeephile T-Shirt</p>
+                    </div>
+                    <div class="Coffee__item--brand">
+                        <p>Redeem our high quality t-shirts</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="Coffee__item">
+                <div class="Coffee__item--image">
+                    <%=image_tag("cup.jpg", alt: "Featured Image")%>
+                </div>
+                <div>
+                    <div class="Coffee__item--title">
+                        <p>Coffeephile Mug</p>
+                    </div>
+                    <div class="Coffee__item--brand">
+                        <p>Redeem our official mug</p>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="Coffee__item">
+                <div class="Coffee__item--image">
+                    <%=image_tag("mask.jpg", alt: "Featured Image")%>
+                </div>
+                <div>
+                    <div class="Coffee__item--title">
+                        <p>Coffeephile Mask</p>
+                    </div>
+                    <div class="Coffee__item--brand">
+                        <p>Redeem our high quality mask</p>
+                    </div>
+                </div>
+            </div>
+
+            <% @coffee_beans.each do |bean| %>
+                <div class="Coffee__item">
+                    <a href="/specific_bean/<%= bean.id %>" class="Coffee__item">
+                        <div class="Coffee__item--image">
+                            <%=image_tag("bluebottle.jpg", alt: "Featured Image")%>
+                        </div>
+                        <div>
+                            <div class="Coffee__item--title">
+                                <p><%= bean.name %></p>
+                            </div>
+                            <div class="Coffee__item--brand">
+                                <p>Order our specialty <%= bean.brand.upcase %></p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            <% end %>
+        </div>
+    </div>
+</div>
