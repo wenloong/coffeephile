@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get '/coffee_beans', to: 'coffee_beans#index'
   
   resources :users, except: [:index] do # view, create, delete, update
-    resources :brews, only: [:index, :show]
+    resources :brews, only: :show
   end
 
 end

@@ -14,6 +14,7 @@
     <th>Creamer(g)</th>
     <th>Milk</th>
     <th>Description</th>
+    <th></th>
   </tr>
   <% @user.brews.each do |brew| %>
     <tr>
@@ -22,7 +23,9 @@
       <td> <%= brew.w_weight%> </td>
       <td> data </td>
       <td> data </td>
-      <td> <%= brew.extra_details%> </td>
+      <td> <%= brew.extra_details%></td> 
+      <td><%= link_to "More Details", user_brew_path(@user, brew) %></td>
+      <td> <%= button_tag "Share" %> </td>
     </tr>
   <% end %>
 </table>
