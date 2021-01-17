@@ -188,4 +188,4 @@ Project Link: [https://github.com/wenloong/coffeephile](https://github.com/wenlo
 [license-url]: https://github.com/wenloong/repo/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/cliffordng/
-[product-screenshot]: /app/assets/images/screenshot.png
+[product-screenshot]: /app/assets/images/SpecificPage.png
