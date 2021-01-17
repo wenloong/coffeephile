@@ -9,6 +9,7 @@ Rails.application.routes.draw do
          sign_up: 'cmon_let_me_in' 
   }
   get '/coffee_beans', to: 'coffee_beans#index'
+  get '/shop', to: 'shop#index'
   get '/specific_bean/:id', to: 'specific_bean#index'
   
   resources :users, except: [:index] do # view, create, delete, update

@@ -4,4 +4,8 @@ class CoffeeBean < ApplicationRecord
     order(rating: :desc).limit(3)
   end
 
+  def self.bottom_three_ratings
+    order(rating: :asc).limit(3)
+  end
+
 end
