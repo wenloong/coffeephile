@@ -60,6 +60,15 @@ p {
                 &:not(:last-child) {
                     margin-right: 20px;
                 }
+
+                input {
+                    background: none;
+                    border: none;
+                    font-family: $primary-font;
+                    font-size: 15px;
+                    color: $primary-font-color;
+                    cursor: pointer;
+                }
             }
 
             .current {
@@ -126,14 +135,22 @@ p {
 .Points {
     display: inline-block;
     float: right;
+    vertical-align: bottom;
     color: #D9594C;
-    font-size: 25px;
+    font-size: 17px;
     max-height: 20px;
+
+    p {
+        font-size: 12px;
+        display: inline-block;
+        vertical-align: middle;
+    }
 
     img {
         width: 20px;
         height: 20px;
         display: inline-block;
+        vertical-align: middle;        
     }
 }
 
@@ -230,29 +247,86 @@ p {
 
 .Form {
     &__field {
-        margin-top: 15px;
+        &--label {
+            margin-top: 35px;
+        }
+
+        &--input {
+            width: 100%;
+
+            input {
+                width: 100%;
+                padding: 10px 0;
+                border: none;
+                color: $tertiary-font-color;
+                background-color: $navigation-color;
+                border-bottom: 1px solid $secondary-font-color;
+
+                &:focus {
+                    border-bottom: 1px solid $primary-color;
+                }
+
+                &:outline {
+                    border-bottom: 1px solid $primary-color;
+                }
+            }
+        }
+
+        &--remember {
+            margin: 15px 0 0;
+            display: flex;
+            align-items: center;
+        }
+
+        &--checkbox {
+            margin-right: 5px;
+        }
 
         &--wrapper {
+            margin-top: -15px;
             display: flex;
             justify-content: space-between;
         }
 
-        input {
-            margin-top: 5px;
-            padding: 5px;
+        &-wrap {
             width: 40%;
         }
     }
-}
 
-form {
+    &__button {
+        margin-top: 15px;
 
+        input {
+            background-color: $primary-color;
+            color: $tertiary-font-color;
+            border: none;
+            padding: 10px 0;
+            border-radius: 5px;
+            font-size: 15px;
+            width: 100%;
+        }
+    }
+
+    &__signupHeader {
+        margin-top: 5px;
+        margin-left: 30px;
+    }
+
+    &__forgot {
+        margin-left: 30px;
+        display: flex;
+
+        a {
+            text-decoration: none;
+            color: $primary-color;
+            margin-right: 10px;
+        }
+    }
 }
 
 .SectionTable {
     min-height: 100vh;
 }
-
 
 .Table {
     margin-top: 20px;
@@ -330,6 +404,11 @@ form {
             }
         }
 
+        &--info {
+            display: flex;
+            justify-content: space-between;
+        }
+
         &--title {
             color: $primary-font-color;
         }
@@ -351,21 +430,21 @@ form {
 
 .Price {
     float: right;
-    padding-right: 30px;
+    margin-right: 25px;
     vertical-align: top;
-    max-width: 10;
-    max-height: 10;
     display: inline-block;
-    font-size: 25px;
-    align-content: right;
-    text-align: right;
-    >img {
+    color: $primary-font-color;
 
+    p {
+        display: inline-block;
+        font-size: 18px;
+    }
+
+    >img {
         width: 20px;
         height: 20px;
         display: inline-block;
-        align-content: right;
-        text-align: right;
+        vertical-align: middle;
     }
 }
 
@@ -535,95 +614,115 @@ form {
 .Login {
     color: $primary-font-color;
     display: block;
-    margin: 100px auto;
-    top: 50%;
-    width: 25%;
     height: 70vh;
+    width: calc(100% - 30vw);
+    margin: 100px auto 0;
+    min-height: 80vh;
 
     &__wrapper {
-        padding: 30px 50px;
-        margin: 0;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: #FFFFFF;
-        border-radius: 10px;
+        display: flex;
+        height: 320px;
+
+
+        &--signup, &--brew {
+            display: flex;
+            height: 420px;
+        }
+
+        &--forgot {
+            display: flex;
+            height: 220px;
+        }
+    }
+
+    &__left {
+        background: #FFFFFF;
+        height: calc(100% - 100px);
+        top: 20px;
+        position: relative;
+        width: 50%;
+        padding: 30px;
+        border-radius: 10px 0 0 10px;
         box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 
-        > p {
-            a {
-                text-decoration: none;
-                color: $primary-color;
-                font-size: 0.9em;
-            }
-        }
-
-        > a {
-            color: $primary-color;
-            text-decoration: none;
-            font-size: 0.9em;
-        }
     }
+
 
     &__header {
-        font-size: 25px;
-        text-align: left;
-    }
+        margin-top: 40px;
 
-    &__field {
-        margin-top: 10px;
-
-        &--input {
-            margin-top: 5px;
-            
-            input {
-                padding: 5px 10px;
-                height: 30px;
-                border: 1px solid $secondary-font-color;
-                border-radius: 5px;
-
-                &:focus {
-                    border: 1px solid $primary-color;
-                    border-radius: 5px;
-                }
+        p {
+            font-size: 40px;
+            font-weight: 800;
+        }
+        
+        &--forgot {
+            p {
+                font-size: 35px;
+                font-weight: 800;
             }
         }
 
-        &--label {
-            &-remember {
-                margin-left: 5px;
-            }
-        }
-
-        &--remember {
-            display: flex;
-            margin-top: 10px;
-        }
-
-        &--checkbox {
-            input {
-                margin: 0;
+        &--brew {
+            margin-top: 50px;
+            p {
+                font-size: 30px;
+                font-weight: 800;
             }
         }
     }
 
-    &__button {
-        margin-top: 15px;
-        input {
-            background-color: $primary-color;
-            color: $tertiary-font-color;
-            border: none;
-            padding: 10px 0;
-            border-radius: 5px;
-            font-size: 15px;
-            width: 100%;
+    &__desc {
+        margin-top: 30px;
+
+        p {
+            font-size: 20px;
         }
     }
 
-    &__signupHeader {
-        margin-top: 20px;
+    &__right {
+        background: $navigation-color;
+        box-shadow: 0px 0px 40px 16px rgba(0,0,0,0.22);
+        color: $tertiary-font-color;
+        position: relative;
+        width: 50%;
+        border-radius: 10px;
     }
+
+    > p {
+        margin-left: 30px;
+        display: flex;
+
+        > a {
+            display: inline-block;
+            text-decoration: none;
+            color: $primary-color;
+            font-size: 0.9em;
+            cursor: pointer;
+        }
+
+        a:first-child {
+            margin-right: 20px;
+        }
+    }
+
+    > a {
+        margin-left: 30px;
+        text-decoration: none;
+        color: $primary-color;
+        font-size: 0.9em;
+        cursor: pointer;
+    }
+
+}
+
+form {
+    width: 80%;
+    margin: 30px auto;
+}
+
+.button_to {
+    margin: 0;   
 }
 
 footer {

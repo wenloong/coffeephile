@@ -1,28 +1,38 @@
 <%= stylesheet_link_tag "application.css" %>
 
 <div class="Login">
-  <div class="Login__wrapper">
-    <div class="Login__header">
-      <p>Forgot password?</p>
+  <div class="Login__wrapper--forgot">
+    <div class="Login__left">
+      <div class="Login__header--forgot">
+        <p>Forgot password?</p>
+      </div>
+      <div class="Login__desc">
+        <p>You silly goose! Did you forget your password?</p>
+      </div>
     </div>
+    
+    <div class="Login__right">
+      <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+        <%= render "devise/shared/error_messages", resource: resource %>
 
-    <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-      <%= render "devise/shared/error_messages", resource: resource %>
-
-      <div class="Login__field">
-        <div class="Login__field--label">
-          <%= f.label :email %><br />
+        <div class="Form__field">
+          <div class="Form__field--label">
+            <%= f.label :email %><br />
+          </div>
+          <div class="Form__field--input">
+            <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+          </div>
         </div>
-        <div class="Login__field--input">
-          <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+
+        <div class="actions Form__button">
+          <%= f.submit "Send instructions" %>
         </div>
-      </div>
-
-      <div class="actions Login__button">
-        <%= f.submit "Send instructions" %>
-      </div>
-    <% end %>
-
+      <% end %>
+    </div>
+  </div>
+  
+  <p>Need or have an account?<p>
+  <div class="Form__forgot">
     <%= render "devise/shared/links" %>
   </div>
 </div>

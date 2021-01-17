@@ -1,48 +1,55 @@
 <%= stylesheet_link_tag "application.css" %>
 <div class="Login">
   <div class="Login__wrapper">
-    <div class="Login__header">
-      <p>Login</p>
+    <div class="Login__left">
+      <div class="Login__header">
+        <p>Login</p>
+      </div>
+      <div class="Login__desc">
+        <p>Welcome back, fellow Coffeephile! What new brewing method will you try today?</p>
+      </div>
     </div>
 
-    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-      <div class="Login__field">
-        <div class="Login__field--label">
-          <%= f.label :email %><br />
-        </div>
-        <div class="Login__field--input">
-          <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-        </div>
-      </div>
-    
-      <div class="Login__field">
-        <div class="Login__field--label">
-          <%= f.label :password %><br />
-        </div>
-        <div class="Login__field--input">
-          <%= f.password_field :password, autocomplete: "current-password" %>
-        </div>
-      </div>
-    
-      <% if devise_mapping.rememberable? %>
-        <div class="Login__field--remember">
-          <div class="Login__field--checkbox">
-            <%= f.check_box :remember_me %>
+    <div class="Login__right">
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <div class="Form__field">
+          <div class="Form__field--label">
+            <%= f.label :email %><br />
           </div>
-          <div class="Login__field--label-remember">
-            <%= f.label :remember_me %>
+          <div class="Form__field--input">
+            <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
           </div>
+        </div>
+      
+        <div class="Form__field">
+          <div class="Form__field--label">
+            <%= f.label :password %><br />
+          </div>
+          <div class="Form__field--input">
+            <%= f.password_field :password, autocomplete: "current-password" %>
+          </div>
+        </div>
+      
+        <% if devise_mapping.rememberable? %>
+          <div class="Form__field--remember">
+            <div class="Form__field--checkbox">
+              <%= f.check_box :remember_me %>
+            </div>
+            <div class="Form__field--label-remember">
+              <%= f.label :remember_me %>
+            </div>
+          </div>
+        <% end %>
+      
+        <div class="actions Form__button">
+          <%= f.submit "Log in" %>
         </div>
       <% end %>
-    
-      <div class="actions Login__button">
-        <%= f.submit "Log in" %>
-      </div>
-    <% end %>
-
-    <p class="Login__signupHeader">Not a Coffeephile?<p>
-    <%= render "devise/shared/links" %>
+    </div>
   </div>
+
+  <p class="Form__signupHeader">Not a Coffeephile?<p>
+  <%= render "devise/shared/links" %>
 </div>
 
 
