@@ -5,13 +5,20 @@
     </div>
 
     <div class="Section">
-        <div class="Section__header">
-            <h3>Browse</h3>
+        <div>
+            <div class="Section__header">
+                <h3>Browse</h3>
+            </div>
+            <div class="Points">
+                <p>Points Remaining: <%= @user.point.value %> 
+                <%=image_tag("coin.png", alt: "Featured Image")%> 
+                </p>
+            </div>
         </div>
         <div class="Coffee__list">
             <div class="Coffee__item">
                 <div class="Coffee__item--image">
-                    <%=image_tag("tshirt.jpg", alt: "Featured Image")%>
+                    <%=image_tag("red-shirt.jpg", alt: "Featured Image")%>
                 </div>
                 <div>
                     <div class="Coffee__item--title">
@@ -19,6 +26,9 @@
                     </div>
                     <div class="Coffee__item--brand">
                         <p>Redeem our high quality t-shirts</p>
+                    </div>
+                    <div class="Price">
+                         15 <%=image_tag("coin.png", alt: "Featured Image")%>
                     </div>
                 </div>
             </div>
@@ -33,6 +43,9 @@
                     </div>
                     <div class="Coffee__item--brand">
                         <p>Redeem our official mug</p>
+                    </div>
+                    <div class="Price">
+                         15 <%=image_tag("coin.png", alt: "Featured Image")%>
                     </div>
                 </div>
             </div>
@@ -49,6 +62,9 @@
                     <div class="Coffee__item--brand">
                         <p>Redeem our high quality mask</p>
                     </div>
+                    <div class="Price">
+                         15 <%=image_tag("coin.png", alt: "Featured Image")%>
+                    </div>
                 </div>
             </div>
 
@@ -64,6 +80,9 @@
                             </div>
                             <div class="Coffee__item--brand">
                                 <p>Order our specialty <%= bean.brand.upcase %></p>
+                            </div>
+                            <div class="Price">
+                                15 <%=image_tag("coin.png", alt: "Featured Image")%>
                             </div>
                         </div>
                     </a>
