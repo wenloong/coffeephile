@@ -187,5 +187,5 @@ Project Link: [https://github.com/wenloong/coffeephile](https://github.com/wenlo
 [license-shield]: https://img.shields.io/github/license/wenloong/coffeephile.svg?style=for-the-badge
 [license-url]: https://github.com/wenloong/coffeephile/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/cliffordng/
+[linkedin-url]: https://www.linkedin.com/in/kim-nick/
 [product-screenshot]: /app/assets/images/SpecificPage.png
