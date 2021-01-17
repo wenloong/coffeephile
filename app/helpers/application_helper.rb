@@ -10,4 +10,8 @@ module ApplicationHelper
     def cp3(path)
         current_page?(user_path(4)) ? "current" : ""
     end
+
+    def cp5(path)
+        current_page?(login_path) ? "current" : ""
+    end
 end
