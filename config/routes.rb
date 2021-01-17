@@ -8,18 +8,11 @@ Rails.application.routes.draw do
         registration: 'register',
          sign_up: 'cmon_let_me_in' 
   }
-  # get '/login' => 'sessions#new'
-  # post '/login' => 'sessions#create'
-  # get '/logout' => 'sessions#destroy'
-
   get '/coffee_beans', to: 'coffee_beans#index'
   get '/specific_bean/:id', to: 'specific_bean#index'
   
-   resources :users, except: [:index] do # view, create, delete, update
-     resources :brews, only: [:show, :new, :create]
-   end
-
-  # get '/signup' => 'users#new'
-  # post '/users' => 'users#create'
+  resources :users, except: [:index] do # view, create, delete, update
+    resources :brews, only: [:show, :new, :create]
+  end
 
 end
