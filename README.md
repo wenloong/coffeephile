@@ -84,17 +84,14 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
-Here's a blank template to get started:
-**To avoid retyping too much info. Do a search and replace with your text editor for the following:**
-`wenloong`, `coffeephile`, `twitter_handle`, `email`, `cofeephile`, `project_description`
+Created during the Rose Hack 2021 Hackathon. 
 
 
 ### Built With
 
 * [Ruby on Rails](https://rubyonrails.org/)
 * [HTML](https://en.wikipedia.org/wiki/HTML)
+* [PostgreSQL](https://www.postgresql.org/)
 * [SCSS]()
 
 
@@ -132,7 +129,7 @@ This is an example of how to list things you need to use the software and how to
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+[![Product Name Screen Shot][product-screenshot]](https://example.com)
 
 _For more examples, please refer to the [Documentation](https://example.com)_
 
@@ -190,4 +187,5 @@ Project Link: [https://github.com/wenloong/coffeephile](https://github.com/wenlo
 [license-shield]: https://img.shields.io/github/license/wenloong/repo.svg?style=for-the-badge
 [license-url]: https://github.com/wenloong/repo/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/wenloong
+[linkedin-url]: https://linkedin.com/in/cliffordng/
+[product-screenshot]: /app/assets/images/screenshot.png
