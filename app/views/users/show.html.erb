@@ -1,0 +1,33 @@
+<h1>Welcome, <%= @user.f_name %>!</h1>
+
+<div class="title-brew-page">
+  <h3>Relive</h3>
+  <h2>Your Brew</h2>
+</div>
+
+<div class="blue-box">
+  <table>
+  <tr>
+    <th>Brew method</th>
+    <th>Coffee(g)</th>
+    <th>Water(g)</th>
+    <th>Creamer(g)</th>
+    <th>Milk</th>
+    <th>Description</th>
+    <th></th>
+  </tr>
+  <% @user.brews.each do |brew| %>
+    <tr>
+      <td> <%= brew.brew_method%> </td>
+      <td> <%= brew.c_weight%> </td>
+      <td> <%= brew.w_weight%> </td>
+      <td> data </td>
+      <td> data </td>
+      <td> <%= brew.extra_details%></td> 
+      <td><%= link_to "More Details", user_brew_path(@user, brew) %></td>
+      <td> <%= button_tag "Share" %> </td>
+    </tr>
+  <% end %>
+</table>
+
+</div>
