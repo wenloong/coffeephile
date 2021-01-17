@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root to: 'homepage#index'
   get '/coffee_beans', to: 'coffee_beans#index'
+  get '/specific_bean/:id', to: 'specific_bean#index'
   
   resources :users, except: [:index] do # view, create, delete, update
     resources :brews, only: :show
