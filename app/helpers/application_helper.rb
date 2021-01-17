@@ -8,6 +8,6 @@ module ApplicationHelper
     end
 
     def cp3(path)
-        current_page?(user_path(1)) ? "current" : ""
+        current_page?(user_path(4)) ? "current" : ""
     end
 end
