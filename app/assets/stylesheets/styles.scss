@@ -123,12 +123,27 @@ p {
     min-height: 100%;
 }
 
+.Points {
+    display: inline-block;
+    float: right;
+    color: #D9594C;
+    font-size: 25px;
+    max-height: 20px;
+
+    img {
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+    }
+}
+
 .Section {
     margin-top: 70px;
     margin-bottom: 50px;
     padding: 0 7vw;
 
     &__header {
+        display: inline-block;
         h3, p {
             margin: 0px;
         }
@@ -323,6 +338,7 @@ form {
             color: $secondary-font-color;
             font-size: 10px;
             margin-top: 5px;
+            display: inline-block;
         }
 
         > div:nth-child(2) {
@@ -330,6 +346,26 @@ form {
             margin-left: 25px;
             margin-bottom: 20px;
         }
+    }
+}
+
+.Price {
+    float: right;
+    padding-right: 30px;
+    vertical-align: top;
+    max-width: 10;
+    max-height: 10;
+    display: inline-block;
+    font-size: 25px;
+    align-content: right;
+    text-align: right;
+    >img {
+
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        align-content: right;
+        text-align: right;
     }
 }
 

@@ -15,17 +15,21 @@
         <ul>
           <li class=<%= cp(root_path) %>><%= link_to "Home", "/" %></li>
           <li class=<%= cp2(coffee_beans_path) %>><%= link_to "Beans", "/coffee_beans" %></li>
-          <li class=<%= cp3(user_path(7)) %>><%= link_to "Brew", "/users/#{User.first.id}" %></li>
-          <li class=<%= cp4(shop_path) %>><%= link_to "Shop", "/shop" %></li>
+          <% if user_signed_in? %>
+            <li class=<%= cp3(user_path(current_user.id)) %>><%= link_to "Brew", "/users/#{current_user.id}" %></li>
+          <% end %>
+          <li><%= link_to "Shop", "/shop" %></li>
+          <% if !user_signed_in? %>
             <li><%= link_to "Signup", new_user_registration_path %></li>
             <li><%= link_to "Login", new_user_session_path %></li>
-            <li><%= button_to "delete", "/auth/logout", :method => :delete %></li>
+          <% else %>
+            <li><%= button_to "Logout", "/auth/logout", :method => :delete %></li>
+          <% end %>
         </ul>
       </div>
     </nav>
-
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+      <p class="notice" style="display:none"><%= notice %></p>
+      <p class="alert" style="display:none"><%= alert %></p>
     <%= yield %>
 
     <footer>
