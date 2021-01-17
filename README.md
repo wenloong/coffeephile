@@ -159,6 +159,8 @@ Distributed under the MIT License. See `LICENSE` for more information.
 ## Contact
 
 Clifford - [wenloongng@gmail.com]()
+Sam - [](https://github.com/SK-Sam)
+Nick - [](https://github.com/nick-kim-96)
 
 Project Link: [https://github.com/wenloong/coffeephile](https://github.com/wenloong/coffeephile)
 
