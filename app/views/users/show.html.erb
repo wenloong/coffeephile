@@ -22,17 +22,18 @@
       <th></th>
       <th></th>
     </tr>
-    <% @user.brews.each do |brew| %>
+    <% @user.brews.most_recent_brews.each do |brew| %>
       <tr class="Table__data">
         <td> <%= brew.brew_method.capitalize %> </td>
         <td> <%= brew.c_weight%> </td>
         <td> <%= brew.w_weight%> </td>
-        <td> N/A </td>
-        <td> N/A </td>
+        <td> <%= brew.cream_weight%> </td>
+        <td> <%= brew.s_weight%> </td>
         <td class="Table__description"> <%= brew.extra_details%></td> 
         <td> <%= link_to "Details", user_brew_path(@user, brew) %></td>
         <td> <%= button_tag "Share" %> </td>
       </tr>
     <% end %>
   </table>
+  <%= link_to "Create New Entry", new_user_brew_path(@user) %>
 </div>
