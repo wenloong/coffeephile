@@ -1,20 +1,69 @@
 <%= stylesheet_link_tag "application.css" %>
 
-<div> Back Button </div>
 <div class="Specific">
-    <div class="Specific__image">
-        <%=image_tag("bluebottle.jpg", alt: "Featured Image")%>
-    </div>
-
-    <div class="Specific__information">
-        <div class="Specifc__title">
-            <p><%= @specific_bean.name %></p>
+    <div class="Specific__wrapper">
+        <div class="Specific__image">
+            <%=image_tag("specific.jpg", alt: "Specific Coffee Image")%>
         </div>
 
-        <div class="Specific__brand">
-            <p><%= @specific_bean.brand %></p>
+        <div class="Specific__information">
+            <div class="Specific__header">
+                <div class="Specific__header--brand">
+                    <p><%= @specific_bean.brand.upcase %></p>
+                </div>
+                <div class="Specific__header--title">
+                    <p><%= @specific_bean.name %></p>
+                </div>
+            </div>
+            
+            <div class="Specific__infoItem--row">
+                <div class="Specific__infoItem--title">
+                    <p>NOTES</p>
+                </div>
+                <div class="Specific__infoItem--desc">
+                    <p><%= @specific_bean.extra_details %></p>
+                </div>
+            </div>
+
+            <div class="Specific__infoFlex">
+                <div class="Specific__infoItem">
+                    <div class="Specific__infoItem--title">
+                        <p>ROAST</p>
+                    </div>
+                    <div class="Specific__infoItem--desc">
+                        <p><%= @specific_bean.roast_level %></p>
+                    </div>
+                </div>
+
+                <div class="Specific__infoItem">
+                    <div class="Specific__infoItem--title">
+                        <p>FLAVOR</p>
+                    </div>
+                    <div class="Specific__infoItem--desc">
+                        <p><%= @specific_bean.flavor %></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="Specific__infoFlex">
+                <div class="Specific__infoItem">
+                    <div class="Specific__infoItem--title">
+                        <p>GEOGRAPHY</p>
+                    </div>
+                    <div class="Specific__infoItem--desc">
+                        <p><%= @specific_bean.geography %></p>
+                    </div>
+                </div>
+
+                <div class="Specific__infoItem">
+                    <div class="Specific__infoItem--title">
+                        <p>PROCESSING</p>
+                    </div>
+                    <div class="Specific__infoItem--desc">
+                        <p><%= @specific_bean.processing.capitalize %></p>
+                    </div>
+                </div>
+            </div>
         </div>
-
     </div>
-
 </div>
