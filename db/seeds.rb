@@ -9,7 +9,7 @@ CoffeeBean.destroy_all
 User.destroy_all
 Brew.destroy_all
 
-user_list = FactoryBot.create_list(:user, 3)
+user_list = FactoryBot.create_list(:user, 3, password: "password")
 
 user_list.each do |user|
   FactoryBot.create_list(:brew, 5, user: user)
