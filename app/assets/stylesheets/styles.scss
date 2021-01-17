@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+$background-color: #F9F9F9;
+$navigation-color: #363636;
+$primary-font: 'Roboto', sans-serif;
+$secondary-font: Sitka Text;
+$primary-font-color: #4E4E4E;
+$secondary-font-color: #808080;
+$tertiary-font-color: #FFFFFF;
+$primary-color: #D9594C;
+
+body {
+    font-family: $primary-font;
+}
+
+.Featured {
+    padding: 0 7vw;
+    min-width: 1100px;
+
+    &__banner {
+        & img {
+            position: relative;
+            width: 100%;
+            border-radius: 20px;
+        }
+    }
+
+    &__information {
+        position: absolute;
+        top: 0;
+        margin-top: 50px;
+        margin-left: 40px;
+        color: $primary-font-color;
+
+        &--header {
+            font-size: 32px;
+            font-weight: bold;
+            width: 300px;
+
+            & h3 {
+                margin: 30px 0;
+            }
+        }
+    
+        &--description {
+            width: 300px;
+        }
+        
+        &--button {
+            button {
+                cursor: pointer;
+                border: none;
+                padding: 10px 20px;
+                background-color: $primary-color;
+                border-radius: 5px;
+                color: $tertiary-font-color;
+                font-weight: bold;
+            }
+        }
+    }   
+}
