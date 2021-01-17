@@ -25,7 +25,6 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
 
 
 
@@ -158,9 +157,12 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-* Clifford - [https://github.com/wenloong]()
+* Clifford - [https://github.com/wenloong]() 
+[![LinkedIn][linkedin-shield]][linkedin-url-c]
 * Sam - [https://github.com/SK-Sam]()
+[![LinkedIn][linkedin-shield]][linkedin-url-s]
 * Nick - [https://github.com/nick-kim-96]()
+[![LinkedIn][linkedin-shield]][linkedin-url-n]
 
 Project Link: [https://github.com/wenloong/coffeephile](https://github.com/wenloong/coffeephile)
 
@@ -189,5 +191,7 @@ Project Link: [https://github.com/wenloong/coffeephile](https://github.com/wenlo
 [license-shield]: https://img.shields.io/github/license/wenloong/coffeephile.svg?style=for-the-badge
 [license-url]: https://github.com/wenloong/coffeephile/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://www.linkedin.com/in/kim-nick/
+[linkedin-url-c]: https://www.linkedin.com/in/cliffordng/
+[linkedin-url-s]: https://www.linkedin.com/in/samuel-horishin-yeo/
+[linkedin-url-n]: https://www.linkedin.com/in/kim-nick/
 [product-screenshot]: /app/assets/images/SpecificPage.png
