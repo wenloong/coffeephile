@@ -9,6 +9,21 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+  <div class=TitleName>
+    <h1> Coffeephile </h1>
+  </div>
+
+  <div>
+    <nav class="nav-bar">
+    <%= link_to "Home", "/" %>
+    <%= link_to "Beans", "/coffee_beans" %>
+    <%= link_to "Brew", "/brews" %>
+    <%= link_to "Shop", "/shop" %>
+    <%= link_to "Login" %>
+    </nav>
+  </div>
+ 
+
   <body>
     <%= yield %>
   </body>
