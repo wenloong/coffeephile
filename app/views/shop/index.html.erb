@@ -11,7 +11,11 @@
                 <h3>Your Coffeephile Points</h3>
             </div>
             <div class="Points">
-                <p>Points Remaining: <%= @user.point.value %> 
+                <p>Points Remaining: <%if current_user == nil || current_user.point == nil%>
+                        <%= 0 %>
+                    <%else%>
+                        <%= current_user.point.value %> 
+                    <% end %>
                   <%=image_tag("coin.png", alt: "Featured Image")%> 
                 </p>
             </div>
