@@ -1,0 +1,20 @@
+<%= stylesheet_link_tag "application.css" %>
+
+<div> Back Button </div>
+<div class="Specific">
+    <div class="Specific__image">
+        <%=image_tag("bluebottle.jpg", alt: "Featured Image")%>
+    </div>
+
+    <div class="Specific__information">
+        <div class="Specifc__title">
+            <p><%= @specific_bean.name %></p>
+        </div>
+
+        <div class="Specific__brand">
+            <p><%= @specific_bean.brand %></p>
+        </div>
+
+    </div>
+
+</div>

@@ -127,6 +127,36 @@ p {
     }
 }
 
+.Specific {
+    position: relative;
+    top: 50;
+    margin-top: 50px;
+    padding: 45px 18vw;
+
+    &__image {
+        display: inline-block;
+        border-radius: 5px 5px 0 0;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        width: 40%;
+    }
+
+    &__information {
+        vertical-align: top;
+        display: inline-block;
+    }
+
+    &__title {
+        vertical-align: top;
+        font-size: 30px;
+        color: $primary-color;
+    }
+
+    &__brand {
+        vertical-align: top;
+        font-size: 50px;
+    }
+}
+
 .Quiz {
     position: relative;
     top: 30;
