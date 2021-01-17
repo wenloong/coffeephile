@@ -11,6 +11,12 @@ $primary-color: #D9594C;
 
 body {
     font-family: $primary-font;
+    background-color: $background-color;
+    margin: 0;
+}
+
+p {
+    margin: 0;
 }
 
 .Featured {
@@ -41,12 +47,13 @@ body {
                 margin: 30px 0;
             }
         }
-    
+
         &--description {
             width: 300px;
         }
         
         &--button {
+            margin-top: 25px;
             button {
                 cursor: pointer;
                 border: none;
@@ -58,4 +65,125 @@ body {
             }
         }
     }   
+}
+
+.Favorite {
+    margin-top: 70px;
+    padding: 0 7vw;
+
+    &__header {
+        h3, h6 {
+            margin: 0;
+        }
+
+        h6 {
+            color: $primary-color;
+            font-size: 17px;
+        }
+
+        h3 {
+            color: $primary-font-color;
+            font-size: 25px;
+        }
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 15px;
+    }
+
+    &__item {
+        background-color: #FFFFFF;
+        width: 30%;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+        &--image {
+            border-radius: 10px 10px 0 0;
+
+            img {
+                max-width: 100%;
+                max-height: 100%;
+                border-radius: 10px 10px 0 0;
+            }
+        }
+
+        &--title {
+            color: $primary-font-color;
+        }
+
+        &--brand {
+            color: $secondary-font-color;
+            font-size: 10px;
+            margin-top: 5px;
+        }
+
+        > div:nth-child(2) {
+            margin-top: 20px;
+            margin-left: 25px;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.Quiz {
+    position: relative;
+    top: 30;
+    margin-top: 40px;
+    padding: 45px 0;
+    background-color: $primary-color;
+    color: $tertiary-font-color;
+    overflow-x: hidden;
+
+    > div:not(:last-child) {
+        margin: 0 7vw;
+    }
+
+    &__title {
+        font-size: 30px;
+    }
+
+    &__button {
+        button {
+            position: relative;
+            z-index: 2;
+            background-color: $primary-color;
+            border: 1px solid $tertiary-font-color;
+            margin-top: 10px;
+            padding: 7px 25px;
+            color: $tertiary-font-color;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    }
+
+    &__backgroundText {
+        position: relative;
+        top: -50;
+        right: -10;
+        color: #E88080;
+        font-family: 'Times New Roman';
+        font-size: 30px;
+        text-align: right;
+        
+        p:nth-child(1) {
+            font-size: 80px;
+            overflow: hidden;
+        }
+    }
+}
+
+.Footer {
+    position: relative;
+    height: 50px;
+    background-color: $navigation-color;
+    color: $tertiary-font-color;
+    padding: 0px 7vw;
+    border-radius: 20px 20px 0 0;
+
+    div {
+        position: absolute;
+        bottom: 10;
+    }
 }
