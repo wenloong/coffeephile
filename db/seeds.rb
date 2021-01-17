@@ -11,8 +11,11 @@ Brew.destroy_all
 
 user_list = FactoryBot.create_list(:user, 3, password: "password")
 
-user_list.each do |user|
+user_list.each_with_index do |user, idx|
   FactoryBot.create_list(:brew, 5, user: user)
+  if idx == 0
+    Point.create(value: [0..10].sample, user: user)
+  end
 end
 
 FactoryBot.create_list(:coffee_bean, 10)
