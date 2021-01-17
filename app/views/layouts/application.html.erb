@@ -4,26 +4,28 @@
     <title>Coffeephile</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
-    
-    
-  </head>
-  <div class=TitleName>
-    <h1> Coffeephile. </h1>
-  </div>
-
-  <div>
-    <nav class="nav-bar">
-    <%= link_to "Home", "/" %>
-    <%= link_to "Beans", "/coffee_beans" %>
-    <%= link_to "Brew", "/brews" %>
-    <%= link_to "Shop", "/shop" %>
-    <%= link_to "Login" %>
-    </nav>
-  </div>
- 
+  </head>  
 
   <body>
+    <nav class="Navigation">
+      <div class="Navigation__left">
+        <p>Coffeephile.</p>
+      </div>
+      <div class="Navigation__right">
+        <ul>
+          <li class=<%= cp(root_path) %>><%= link_to "Home", "/" %></li>
+          <li class=<%= cp2(coffee_beans_path) %>><%= link_to "Beans", "/coffee_beans" %></li>
+          <li class=<%= cp3(user_path(1)) %>><%= link_to "Brew", "/users/1" %></li>
+          <li><%= link_to "Shop", "/shop" %></li>
+          <li><%= link_to "Login" %></li>
+        </ul>
+      </div>
+    </nav>
+
     <%= yield %>
+
+    <footer>
+      <div>Made with ☕ by three trolls</div>
+    </footer>
   </body>
 </html>

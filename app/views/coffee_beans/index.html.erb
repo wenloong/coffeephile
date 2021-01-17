@@ -1,12 +1,25 @@
-<div>
-<h3> Explore </h3>
-<h2> Different Coffee </h2>
-</div>
-<div class="table">
+<%= stylesheet_link_tag "application.css" %>
 
-    <% @coffee_beans.each do |bean| %>
-        <div>
-            <p> <%= bean.name %> <%= bean.roast_level %> </p>
-        </div>
-    <% end %>
+<div class="Section">
+    <div class="Section__header">
+        <p>Explore</p>
+        <h3>Different Coffee</h3>
+    </div>
+    <div class="Coffee__list">
+        <% @coffee_beans.each do |bean| %>
+            <div class="Coffee__item">
+                <div class="Coffee__item--image">
+                    <%=image_tag("bluebottle.jpg", alt: "Featured Image")%>
+                </div>
+                <div>
+                    <div class="Coffee__item--title">
+                        <p><%= bean.name %></p>
+                    </div>
+                    <div class="Coffee__item--brand">
+                        <p><%= bean.brand.upcase %></p>
+                    </div>
+                </div>
+            </div>
+        <% end %>
+    </div>
 </div>
