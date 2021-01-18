@@ -34,7 +34,6 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 # Reduces boot times through caching; required in config/boot.rb
-gem "rake"
 gem 'devise'
 gem 'factory_bot_rails'
 gem 'faker'
