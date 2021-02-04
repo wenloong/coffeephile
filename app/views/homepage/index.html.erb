@@ -1,66 +1,56 @@
 <%= stylesheet_link_tag "application.css" %>
 <div class="Homepage">
-    <div class="Featured">
-        <div class="Featured__banner">
-            <%=image_tag("featured.jpg", alt: "Featured Image")%>
-        </div>
-        <div class="Featured__information">
-            <div class="Featured__information--header">
-                <h3>Find your favorite beans</h3>
+    <section class="About">
+        <div class="About__info">
+            <div class="About__info-header">
+                <p>The First Largest Coffee Database</p>
             </div>
-            <div class="Featured__information--description">
-                <p>Light roast, medium roast, or dark roast? Lorem ipsum soda carbonate.</p>
+            <div class="About__info-desc">
+                <p>Explore coffee beans from all across the world.</p>
             </div>
-            <div class="Featured__information--button">
-                <a href="/coffee_beans" class="Coffee__item">
-                    <button>Discover Beans</button>
-                </a>
+            <div class="About__info-button">
+                <button>Get Started</button>
             </div>
         </div>
-    </div>
-
-    <div class="Section">
-        <div class="Section__header">
-            <p>Discover</p>
-            <h3>Staff's Picks</h3>
+        <div class="About__svg">
+            <%= show_svg("guycoffee.svg")%>
         </div>
-        
-                    
-        <div class="Favorite__list">
-
-            <% @top_three_coffees.each do |coffee| %>
-
-                <div class="Coffee__item">
-                    <a href="/specific_bean/<%= coffee.id %>" class="Coffee__item">
-                      <div class="Coffee__item--image">
-                        <%=image_tag("bluebottle.jpg", alt: "Featured Image")%>
-                      </div>
-                      <div>
-                        <div class="Coffee__item--title">
-                          <p><%= coffee.name %></p>
-                        </div>
-                        <div class="Coffee__item--brand">
-                          <p><%= coffee.brand %></p>
-                        </div>
-                      </div>
-                    </a>
-                </div>
-  
-            <% end %>
+    </section>
+    <%= react_component("BackgroundFiller", { BackgroundFillerStyle: "BackgroundFiller-right", header: "Coffeephile.", desc: "(n.) a person in pursuit for the perfect cup of coffee." }) %>
+    <section class="About">
+        <div class="About__svg">
+            <%= show_svg("communitycoffee.svg")%>
         </div>
-                 
-
-    </div>
-  <section class="Quiz">
-      <div class="Quiz__title">
-          <p>Need help on deciding your next coffee?</p>
-      </div>
-      <div class="Quiz__button">
-          <a href="https://beanbox.com/coffee-quiz"><button>Take the quiz</button></a>
-      </div>
-      <div class="Quiz__backgroundText">
-          <p>Coffeephile</p>
-          <p>(n.) a person in pursuit for the perfect cup of coffee.</p>
-      </div>
-  </section>
+        <div class="About__info">
+            <div class="About__info-header">
+                <p>A Community Of Coffee Lovers</p>
+            </div>
+            <div class="About__info-desc">
+                <p>Discuss with fellow coffee lovers and discover new recipes.</p>
+            </div>
+        </div>
+    </section>
+    <%= react_component("BackgroundFiller", { BackgroundFillerStyle: "BackgroundFiller-left", header: "Brew", desc: "(v.) to make (tea or coffee) by mixing it with hot water." }) %>
+    <section class="About">
+        <div class="About__info">
+            <div class="About__info-header">
+                <p>Share And Discover New Recipes</p>
+            </div>
+            <div class="About__info-desc">
+                <p>Log your coffee entry and share your brew with the world or find new exiciting recipes to try.</p>
+            </div>
+        </div>
+        <div class="About__svg">
+            <%= show_svg("coffeenote.svg")%>
+        </div>
+    </section>
+    <%= react_component("BackgroundFiller", { BackgroundFillerStyle: "BackgroundFiller-right", header: "Coffee", desc: "(n.) a hot drink made from the roasted and ground seeds of a tropical shrub." }) %>
+    <section class="Join">
+        <div class="Join__header">
+            <p>Ready To Be A CoffeePhile?</p>
+        </div>
+        <div class="Join__button">
+            <button>Sign Up</button>
+        </div>
+    </section>
 </div>
