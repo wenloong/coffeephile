@@ -9,7 +9,7 @@
                 <p>Explore coffee beans from all across the world.</p>
             </div>
             <div class="About__info-button">
-                <button>Get Started</button>
+                <%= button_to "Get Started", "/auth/register/cmon_let_me_in", :method => :get %>
             </div>
         </div>
         <div class="About__svg">
@@ -50,7 +50,7 @@
             <p>Ready To Be A CoffeePhile?</p>
         </div>
         <div class="Join__button">
-            <button>Sign Up</button>
+            <%= button_to "Sign Up", "/auth/register/cmon_let_me_in", :method => :get %>
         </div>
     </section>
 </div>

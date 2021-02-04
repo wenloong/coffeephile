@@ -27,6 +27,149 @@ p {
     color: $primary-color;
 }
 
+.Homepage {
+    position: relative;
+    min-height: 100%;
+    overflow-x: hidden;
+}
+
+.About {
+    display: flex;
+    align-items: center;
+    margin-top: 100px;
+    padding: 0 15vw;
+    justify-content: space-between;
+
+    &__info {
+        color: $primary-font-color;
+        &-header {
+            font-weight: bold;
+        }
+
+        &-desc {
+            font-weight: 300;
+            margin-top: 20px;
+        }
+
+        &-button {
+            margin-top: 50px;
+
+            button {
+                font-size: 1em;
+                padding: 15px 35px;
+                background-color: $primary-color;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                color: $tertiary-font-color;
+            }
+        }
+    }
+
+    
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (min-width : 280px) {
+    .About {
+        flex-wrap: wrap;
+        justify-content: center;
+
+        &__info {
+            width: 100%;
+            text-align: center;
+
+            &-header {
+                font-size: 3em;
+            }
+    
+            &-desc {
+                font-size: 1.5em;
+                margin-top: 20px;
+            }
+    
+            &-button {
+                margin-top: 50px;
+                button {
+                    font-size: 1em;
+                    padding: 15px 35px;
+                }
+            }
+        }
+
+        &__svg {
+            &:not(:nth-child(1)) {
+                margin-top: 50px;
+            }
+
+            svg {
+                width: 400px;
+                height: auto;
+            }
+        }
+    }    
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-width : 768px)  {
+    .About {
+        &__info {
+            width: 100%;
+        }
+
+        &__svg {
+            svg {
+                width: 550px;
+                height: auto;
+            }
+        }
+    }
+}
+
+/* Desktop (landscape) ----------- */
+@media only screen 
+and (min-width : 1224px) {
+    .About {
+        flex-wrap: nowrap;
+
+        &__info {
+            text-align: left;
+            margin-right: 50px;
+
+            &-header {
+                font-size: 3.5em;
+            }
+    
+            &-desc {
+                font-size: 2em;
+                font-weight: 300;
+                margin-top: 20px;
+            }
+    
+            &-button {
+                margin-top: 50px;
+                button {
+                    font-size: 1em;
+                }
+            }
+        }
+
+        &__svg {
+            &:not(:nth-child(1)) {
+                margin-top: 0px;
+            }
+
+            svg {
+                width: 650px;
+                height: auto;
+            }
+        }
+    }
+    
+}
+
 .Banner {
     font-size: 40px;
     color: $secondary-font-color;
@@ -129,55 +272,6 @@ p {
             }
         }
     }   
-}
-
-.Homepage {
-    position: relative;
-    min-height: 100%;
-    overflow-x: hidden;
-}
-
-.About {
-    display: flex;
-    align-items: center;
-    margin-top: 100px;
-    padding: 0 15vw;
-    justify-content: space-between;
-
-    &__info {
-        color: $primary-font-color;
-        width: 500px;
-        &-header {
-            font-size: 3.5em;
-            font-weight: bold;
-        }
-
-        &-desc {
-            font-size: 1.8em;
-            font-weight: 300;
-            margin-top: 20px;
-        }
-
-        &-button {
-            margin-top: 50px;
-            button {
-                font-size: 1em;
-                padding: 15px 35px;
-                background-color: $primary-color;
-                border: none;
-                border-radius: 5px;
-                cursor: pointer;
-                color: $tertiary-font-color;
-            }
-        }
-    }
-
-    &__svg {
-        svg {
-            width: 550px;
-            height: auto;
-        }
-    }
 }
 
 .Points {
@@ -735,6 +829,7 @@ p {
         position: relative;
         width: 50%;
         border-radius: 10px;
+        padding: 20px;
     }
 
     > p {
@@ -765,12 +860,21 @@ p {
 }
 
 form {
-    width: 80%;
     margin: 30px auto;
 }
 
 .button_to {
-    margin: 0;   
+    margin: 0;
+
+    input {
+        padding: 15px 30px;
+        color: $tertiary-font-color;
+        background-color: $primary-color;
+        border: none;
+        border-radius: 5px;
+        font-size: 1em;
+        cursor: pointer;
+    }
 }
 
 footer {
