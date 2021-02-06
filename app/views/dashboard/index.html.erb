@@ -1,12 +1,22 @@
 <div class="articles-section">
+  <p>Top Trending</p>
+  <p>Articles</p>
   <p>Currently no articles. Would you like to create one?</p>
 </div>
 
 <div class="recommended-section">
+  <p>Recommended</p>
+  <p>Just For You</p>
   <p>No recommendations for now. Add some brews to start receiving recommendations!</p>
 </div>
 
 <div class="quick-entry-section">
+  <p>Quick Entry</p>
+  <p>New Brew</p>
+  <%= form_with do |f| %>
+    <%= f.label :bean_brand %>
+    <%= f.text_field :bean_brand %>
+  <% end %>
   <%= link_to "New Brew" %>
   <%= link_to "Bean Brand" %>
   <%= link_to "Brew Type" %>
