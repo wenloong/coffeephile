@@ -10,7 +10,7 @@ RSpec.describe 'User Dashboard' do
       click_on "Log in"
     end
     it 'can visit the dashboard page and see content as a user' do
-      expect(current_path).to eq(dashboard_path)
+      expect(current_path).to eq(dashboard_index_path)
       within('div.articles-section') do
         expect(page).to have_content("Currently no articles. Would you like to create one?")
       end
