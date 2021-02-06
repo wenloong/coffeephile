@@ -80,7 +80,7 @@ Rails.application.configure do
   config.log_formatter = ::Logger::Formatter.new
 
   # Precompiler for SVGs
-  config.assets.precompile += $w('.svg')
+  config.assets.precompile += %w(.svg)
 
   # Must include to get inline SVGs to work in deploy
   config.assets.css_compressor = :sass
