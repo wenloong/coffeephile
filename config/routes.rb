@@ -8,8 +8,10 @@ Rails.application.routes.draw do
         registration: 'register',
          sign_up: 'cmon_let_me_in' 
   }
-  get '/coffee_beans', to: 'coffee_beans#index'
-  get '/shop', to: 'shop#index'
+  #get '/coffee_beans', to: 'coffee_beans#index'
+  resources :coffee_beans, only: [:index]
+  #get '/shop', to: 'shop#index'
+  resources :shop, only: [:index]
   get '/specific_bean/:id', to: 'specific_bean#index'
   
   resources :users, except: [:index] do # view, create, delete, update
