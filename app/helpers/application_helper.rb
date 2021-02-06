@@ -18,4 +18,10 @@ module ApplicationHelper
     def cp5(path)
         current_page?(login_path) ? "current" : ""
     end
+
+    def show_svg(path)
+        File.open("app/assets/images/#{path}", "rb") do |file|
+            raw file.read
+        end
+    end
 end

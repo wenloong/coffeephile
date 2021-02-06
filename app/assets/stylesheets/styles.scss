@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
 
 $background-color: #F9F9F9;
 $navigation-color: #363636;
@@ -7,12 +9,14 @@ $secondary-font: Sitka Text;
 $primary-font-color: #4E4E4E;
 $secondary-font-color: #808080;
 $tertiary-font-color: #FFFFFF;
+$quaternary-font-color: #f0f0f0;
 $primary-color: #D9594C;
 
 body {
     font-family: $primary-font;
     background-color: $background-color;
     margin: 0;
+    color: $primary-font-color;
 }
 
 p {
@@ -21,6 +25,149 @@ p {
 
 #text-highlight {
     color: $primary-color;
+}
+
+.Homepage {
+    position: relative;
+    min-height: 100%;
+    overflow-x: hidden;
+}
+
+.About {
+    display: flex;
+    align-items: center;
+    margin-top: 100px;
+    padding: 0 15vw;
+    justify-content: space-between;
+
+    &__info {
+        color: $primary-font-color;
+        &-header {
+            font-weight: bold;
+        }
+
+        &-desc {
+            font-weight: 300;
+            margin-top: 20px;
+        }
+
+        &-button {
+            margin-top: 50px;
+
+            button {
+                font-size: 1em;
+                padding: 15px 35px;
+                background-color: $primary-color;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                color: $tertiary-font-color;
+            }
+        }
+    }
+
+    
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (min-width : 280px) {
+    .About {
+        flex-wrap: wrap;
+        justify-content: center;
+
+        &__info {
+            width: 100%;
+            text-align: center;
+
+            &-header {
+                font-size: 3em;
+            }
+    
+            &-desc {
+                font-size: 1.5em;
+                margin-top: 20px;
+            }
+    
+            &-button {
+                margin-top: 50px;
+                button {
+                    font-size: 1em;
+                    padding: 15px 35px;
+                }
+            }
+        }
+
+        &__svg {
+            &:not(:nth-child(1)) {
+                margin-top: 50px;
+            }
+
+            svg {
+                width: 400px;
+                height: auto;
+            }
+        }
+    }    
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-width : 768px)  {
+    .About {
+        &__info {
+            width: 100%;
+        }
+
+        &__svg {
+            svg {
+                width: 550px;
+                height: auto;
+            }
+        }
+    }
+}
+
+/* Desktop (landscape) ----------- */
+@media only screen 
+and (min-width : 1224px) {
+    .About {
+        flex-wrap: nowrap;
+
+        &__info {
+            text-align: left;
+            margin-right: 50px;
+
+            &-header {
+                font-size: 3.5em;
+            }
+    
+            &-desc {
+                font-size: 2em;
+                font-weight: 300;
+                margin-top: 20px;
+            }
+    
+            &-button {
+                margin-top: 50px;
+                button {
+                    font-size: 1em;
+                }
+            }
+        }
+
+        &__svg {
+            &:not(:nth-child(1)) {
+                margin-top: 0px;
+            }
+
+            svg {
+                width: 650px;
+                height: auto;
+            }
+        }
+    }
+    
 }
 
 .Banner {
@@ -125,11 +272,6 @@ p {
             }
         }
     }   
-}
-
-.Homepage {
-    position: relative;
-    min-height: 100%;
 }
 
 .Points {
@@ -687,6 +829,7 @@ p {
         position: relative;
         width: 50%;
         border-radius: 10px;
+        padding: 20px;
     }
 
     > p {
@@ -717,12 +860,21 @@ p {
 }
 
 form {
-    width: 80%;
     margin: 30px auto;
 }
 
 .button_to {
-    margin: 0;   
+    margin: 0;
+
+    input {
+        padding: 15px 30px;
+        color: $tertiary-font-color;
+        background-color: $primary-color;
+        border: none;
+        border-radius: 5px;
+        font-size: 1em;
+        cursor: pointer;
+    }
 }
 
 footer {
@@ -739,5 +891,53 @@ footer {
         position: absolute;
         bottom: 10px;
         padding: 0px 7vw;
+    }
+}
+
+/* === BackgroundFiller === */
+.BackgroundFiller {
+    color: $quaternary-font-color;
+    font-family: 'Times New Roman', Times, serif;
+    position: relative;
+    white-space: nowrap;
+    left: 60%;
+    z-index: -1;
+
+    &-left {
+        left: -50px;
+    }
+
+    &__header {
+        font-size: 7em;
+    }
+
+    &__desc {
+        font-size: 2.4em;
+    }
+}
+
+/* === Join === */
+.Join {
+    margin: 200px 0;
+    padding: 0 15vw;
+    text-align: center;
+
+    &__header {
+        font-size: 3em;
+        font-weight: bold;
+    }
+
+    &__button {
+        margin-top: 25px;
+
+        button {
+            font-size: 1em;
+            cursor: pointer;
+            padding: 20px 40px;
+            color: $tertiary-font-color;
+            background-color: $primary-color;
+            border: none;
+            border-radius: 5px;
+        }
     }
 }
