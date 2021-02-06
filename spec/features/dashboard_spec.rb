@@ -17,7 +17,7 @@ RSpec.describe 'User Dashboard' do
       within('div.recommended-section') do
         expect(page).to have_content("No recommendations for now. Add some brews to start receiving recommendations!")
       end
-      within('div.quick-entry') do
+      within('div.quick-entry-section') do
         expect(page).to have_content("New Brew")
         expect(page).to have_content("Bean Brand")
         expect(page).to have_content("Brew Type")
