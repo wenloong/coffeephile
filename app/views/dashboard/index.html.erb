@@ -1,0 +1,53 @@
+<div class="articles-section">
+  <p>Top Trending</p>
+  <p>Articles</p>
+  <p>Currently no articles. Would you like to create one?</p>
+  <div class="article">
+    <p>Posted by xD</p>
+    <p class="article-title">Any fellow night owls?</p>
+    <p class="article-body">I can't help but drink coffee whenever I get the chance. As a result, I always end up staying up awake late at night. Can anyone relate or is it just me?</p>
+    
+    <div class="article-like">
+      <p>insert heart emoji</p>
+      <p>155 Comments</p>
+      <p>1 hour ago</p>
+    </div>
+  </div>
+
+  <div class="article">
+    <p>Posted by Kappa</p>
+    <p class="article-title">DogeCoin to the moon</p>
+    <p class="article-body">DogeCoin to the moon? OR??? CoffeeCoin to the moon? :thinking:</p>
+    
+    <div class="article-like">
+      <p>insert heart emoji</p>
+      <p>12 Comments</p>
+      <p>4 hour ago</p>
+    </div>
+  </div>
+
+</div>
+
+<div class="recommended-section">
+  <p>Recommended</p>
+  <p>Just For You</p>
+  <p>No recommendations for now. Add some brews to start receiving recommendations!</p>
+</div>
+
+<div class="quick-entry-section">
+  <p>Quick Entry</p>
+  <p>New Brew</p>
+  <%= form_with do |f| %>
+    <%= f.label :bean_brand %>
+    <%= f.text_field :bean_brand %>
+  <% end %>
+  <%= link_to "New Brew" %>
+  <%= link_to "Bean Brand" %>
+  <%= link_to "Brew Type" %>
+  <%= link_to "French Press" %>
+  <%= link_to "Cold Brew" %>
+  <%= link_to "Moka Pot" %>
+  <%= link_to "Pour Over" %>
+  <%= link_to "Aeropress" %>
+  <%= link_to "Drip Coffee" %>
+</div>

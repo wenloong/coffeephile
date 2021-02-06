@@ -20,6 +20,7 @@
             <li class=<%= cp3(user_path(current_user.id)) %>><%= link_to "Brew", "/users/#{current_user.id}" %></li>
           <% end %>
           <li><%= link_to "Shop", "/shop" %></li>
+          <li><%= link_to "Discuss" %> </li>
           <% if !user_signed_in? %>
             <li><%= link_to "Login", new_user_session_path %></li>
           <% else %>
