@@ -92,6 +92,7 @@ Created during the Rose Hack 2021 Hackathon.
 * [HTML](https://en.wikipedia.org/wiki/HTML)
 * [PostgreSQL](https://www.postgresql.org/)
 * [SCSS]()
+* [Selenium](https://www.selenium.dev/projects/)
 
 
 
