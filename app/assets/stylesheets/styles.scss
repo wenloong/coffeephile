@@ -299,7 +299,7 @@ and (min-width : 1224px) {
 .Section {
     margin-top: 70px;
     margin-bottom: 50px;
-    padding: 0 7vw;
+    padding: 0 10vw;
 
     &__header {
         display: inline-block;
@@ -315,6 +315,7 @@ and (min-width : 1224px) {
         h3 {
             color: $primary-font-color;
             font-size: 25px;
+            font-weight: 400;
         }
     }
 

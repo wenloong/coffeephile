@@ -1,0 +1,79 @@
+$background-color: #F9F9F9;
+$navigation-color: #363636;
+$primary-font: 'Roboto', sans-serif;
+$secondary-font: Sitka Text;
+$primary-font-color: #4E4E4E;
+$secondary-font-color: #808080;
+$tertiary-font-color: #FFFFFF;
+$quaternary-font-color: #f0f0f0;
+$primary-color: #D9594C;
+
+.Article {
+
+  &__wrapper {
+    margin-top: 25px;
+  }
+
+  &__img {
+    display: inline-block;
+    vertical-align: top;
+
+    img {
+      width: 50px;
+      height: 50px;
+      border-radius: 100%;
+    }
+  }
+
+  &__container {
+    display: inline-block;
+    width: 60%;
+    margin-left: 20px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border-radius: 0 10px 10px 10px;
+    padding: 20px;
+  }
+
+  &__username {
+    font-size: 0.9em;
+    color: $secondary-font-color;
+    
+  }
+
+  &__title {
+    font-size: 1.5em;
+  }
+
+  &__post {
+    margin-top: 5px;
+  }
+
+  &__info {
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__stats {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__numLikes, &__numComments, &__date {
+    font-size: 0.9em;
+
+    > img, > p {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    > p {
+      margin-left: 5px;
+    }
+  }
+
+  &__numComments {
+    margin-left: 10px;
+  }
+}
