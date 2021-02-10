@@ -24,7 +24,7 @@
           <% if !user_signed_in? %>
             <li><%= link_to "Login", new_user_session_path %></li>
           <% else %>
-            <li><%= button_to "Logout", "/auth/logout", :method => :delete %></li>
+            <li><%= link_to "Logout", "/auth/logout", :method => :delete %></li>
           <% end %>
         </ul>
       </div>

@@ -17,19 +17,21 @@ interface Article {
 function getPostedTime(datePosted): String {
   let current = new Date()
   let currentYear = current.getFullYear()
-  let currentMonth = current.getMonth()
-  let currentDate = current.getDate()
-  let currentHour = current.getHours()
-  let currentMinute = current.getMinutes()
+  let currentMonth = current.getUTCMonth() + 1
+  let currentDate = current.getUTCDate()
+  let currentHour = current.getUTCHours()
+  let currentMinute = current.getUTCMinutes()
 
-  let postedDate = datePosted.split(/[:-\s]/)
-  // In the Format of YYYY-MM-DD HH:MM:SS
+  let postedDate = datePosted.split(/[T:-]/)
+  // In the Format of YYYY-MM-DDTHH:MM.SSSZ
   /*
     Remember to do test case for international time.
     current will take the system's current time, but we might
     need to convert it to match the database's timezone
   */
 
+  console.log(currentDate);
+  console.log(postedDate);
   if (postedDate[0] != currentYear) {
     return (currentYear - postedDate[0]) + " years ago"
   } else if (postedDate[1] != currentMonth) {

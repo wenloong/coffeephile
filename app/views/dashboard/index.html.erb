@@ -5,11 +5,20 @@
     <p>Top Trending</p>
     <h3>Articles</h3>
   </div>
-  <%= react_component("Article", { username: "sleepyowl31", img: "an image", title: "Coffee anyone?", post: "I can't help but drink coffee whenever I get the chance. As a result, I always
-end up staying up awake late at nights. Can anyone relate or is it just me?", datePosted: "2021-01-08 04:05:06", numLikes: "1090920", numComments: "21" }) %>
-  <%= react_component("Article", { username: "sleepyowl31", img: "an image", title: "Coffee anyone?", post: "I want a coffee.", datePosted: "2020-01-08 04:05:06", numLikes: "201939", numComments: "21" }) %>
-  <%= react_component("Article", { username: "sleepyowl31", img: "an image", title: "Coffee anyone?", post: "I want a coffee.", datePosted: "2021-01-08 21:05:06", numLikes: "31100", numComments: "21" }) %>
-  <%= react_component("Article", { username: "sleepyowl31", img: "an image", title: "Coffee anyone?", post: "I want a coffee.", datePosted: "2021-01-08 22:37:06", numLikes: "3100", numComments: "21" }) %>
+
+  <% @articles.each do |article| %>
+    <%= react_component("Article",
+      { username: article.username ,
+        img: "an image",
+        title: article.title,
+        post: article.post,
+        numLikes: article.numLikes,
+        numComments: article.numComments,
+        datePosted: article.created_at })
+    %>
+  <% end %>
+  
+  <button>New</button>
   <div class="recommended-section">
     <p>Recommended</p>
     <p>Just For You</p>

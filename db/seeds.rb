@@ -8,6 +8,7 @@
 CoffeeBean.destroy_all
 User.destroy_all
 Brew.destroy_all
+Article.destroy_all
 
 user_list = FactoryBot.create_list(:user, 3, password: "password")
 
@@ -37,3 +38,21 @@ CoffeeBean.create(brand: "Ritual Coffee", name: "Mugano", extra_details: "That e
 
 CoffeeBean.create(brand: "Happy Mug", name: "Nutty Brazil", extra_details: "We rarely roast Brazil for brewing as coffee because they tend to also be a little dirty tasting and muddy, but this one is clean and sweet and delicious. ",
   roast_level: 5, rating: 2, geography: "Sitio, Brazil", flavor: "Chocolatey", processing: "Washed")
+
+Article.create(username: "sleepyowl31", title: "Coffee anyone?", post: "I can't help but drink coffee whenever I get the chance. As a result, I always end up staying up awake late at nights. Can anyone relate or is it just me?",
+  numLikes: 301030, numComments: 30)
+
+Article.create(username: "MelonMusk", title: "To the moon", post: "Dogecoin is about to head to the moon. You're welcome (:",
+  numLikes: 3021030, numComments: 3033)
+  
+Article.create(username: "admin", title: "Test Post", post: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+  numLikes: 231, numComments: 12)
+
+Article.create(username: "sleepyowl31", title: "Coffee anyone?", post: "I can't help but drink coffee whenever I get the chance. As a result, I always end up staying up awake late at nights. Can anyone relate or is it just me?",
+  numLikes: 301030, numComments: 30)
+
+Article.create(username: "MelonMusk", title: "To the moon", post: "Dogecoin is about to head to the moon. You're welcome (:",
+  numLikes: 3021030, numComments: 3033)
+  
+Article.create(username: "admin", title: "Test Post", post: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+  numLikes: 231, numComments: 12)
